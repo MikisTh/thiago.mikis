@@ -1,0 +1,888 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Thiago Mikis | Portfólio Profissional</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #08111f;
+      color: #f1f5ff;
+      overflow-x: hidden;
+    }
+
+    body::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    body::-webkit-scrollbar-thumb {
+      background: #2563eb;
+      border-radius: 20px;
+    }
+
+    header {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(135deg,
+          #020617,
+          #08111f,
+          #0f172a,
+          #172554);
+    }
+
+    .hero {
+      max-width: 1000px;
+    }
+
+    .hero img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #2563eb;
+      box-shadow: 0 0 40px rgba(37, 99, 235, .5);
+      margin-bottom: 30px;
+      transition: .4s;
+    }
+
+    .hero img:hover {
+      transform: scale(1.03);
+    }
+
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .hero h2 {
+      font-size: 1.4rem;
+      color: #60a5fa;
+      margin-bottom: 25px;
+      font-weight: 400;
+    }
+
+    .hero p {
+      max-width: 780px;
+      margin: auto;
+      font-size: 1.05rem;
+      color: #cbd5e1;
+      line-height: 1.9;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(2, 6, 23, .92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      gap: 35px;
+      padding: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      transition: .3s;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #60a5fa;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 25px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .section-title h2 {
+      font-size: 2.7rem;
+      color: #60a5fa;
+      margin-bottom: 15px;
+    }
+
+    .section-title p {
+      color: #94a3b8;
+    }
+
+    .sobre {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+      
+    }
+
+    .sobre img {
+      width: 100%;
+      max-width: 420px;
+      margin: auto;
+      display: block;
+      border-radius: 30px;
+      border: 3px solid #1d4ed8;
+      box-shadow: 0 0 40px rgba(37, 99, 235, .2);
+    }
+
+    .sobre-texto {
+      font-size: 1.05rem;
+      line-height: 2;
+      color: #dbeafe;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: rgba(15, 23, 42, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 35px;
+      border-radius: 25px;
+      border: 1px solid rgba(255, 255, 255, .06);
+      transition: .4s;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: #2563eb;
+    }
+
+    .card h3 {
+      color: #60a5fa;
+      margin-bottom: 18px;
+      font-size: 1.3rem;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      line-height: 1.8;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 40px;
+    }
+
+    .skill {
+      background: #1e3a8a;
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 50px;
+      font-weight: 500;
+      transition: .3s;
+    }
+
+    .skill:hover {
+      background: #2563eb;
+      transform: scale(1.05);
+    }
+
+    .contato {
+      text-align: center;
+      background: #0f172a;
+      padding: 60px 20px;
+      border-radius: 30px;
+      border: 1px solid rgba(255, 255, 255, .06);
+    }
+
+    .contato h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #60a5fa;
+    }
+
+    .contato p {
+      color: #cbd5e1;
+      margin-bottom: 20px;
+    }
+
+    .btns {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: .3s;
+    }
+
+    .btn-primary {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #1d4ed8;
+      transform: translateY(-3px);
+    }
+
+    .btn-secondary {
+      border: 2px solid #2563eb;
+      color: #60a5fa;
+    }
+
+    .btn-secondary:hover {
+      background: #2563eb;
+      color: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px;
+      background: #020617;
+      color: #94a3b8;
+      margin-top: 80px;
+    }
+
+    @media(max-width:900px) {
+
+      .sobre {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .hero h2 {
+        font-size: 1.1rem;
+      }
+
+      .hero img {
+        width: 180px;
+        height: 180px;
+      }
+
+    .qrcode{
+      width:220px;
+      padding:12px;
+      background:#fff;
+
+      border:4px solid #2563eb;
+      border-radius:35px;
+
+      overflow:hidden;
+
+      box-shadow:0 0 25px rgba(37,99,235,.3);
+      transition:.4s;
+    }
+
+    .qrcode img{
+        width:100%;
+        display:block;
+        border-radius:25px;
+        overflow:hidden;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <div class="hero">
+
+      <img src="./img/foto02.jpg" alt="Thiago Mikis">
+
+      <h1>Thiago Mikis Oliveira dos Santos</h1>
+
+      <h2>
+       21/05/1999
+      </h2>
+
+      <p>
+        Profissional com experiência administrativa na área pública,
+        atuação em Vigilância Sanitária, suporte técnico,
+        atendimento ao público, organização documental
+        e sistemas administrativos institucionais.
+        Possuo conhecimentos em tecnologia,
+        desenvolvimento web e ferramentas digitais.
+      </p>
+
+    </div>
+
+  </header>
+
+  <!-- NAV -->
+
+  <nav>
+
+    <ul>
+
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#objetivo">Objetivo</a></li>
+      <li><a href="#experiencia">Experiência Profissional</a></li>
+      <li><a href="#formacao">Formação Acadêmica</a></li>
+      <li><a href="#habilidades">Habilidades</a></li>      
+      <li><a href="#contato">Contato</a></li>
+
+    </ul>
+
+  </nav>
+
+  <!-- SOBRE -->
+
+  <section id="sobre">
+
+    <div class="section-title">
+
+      <h2>Sobre Mim</h2> 
+
+    </div>
+
+    <div class="sobre">
+
+      <img src="./img/foto01.png" alt="Thiago Mikis">
+
+      <div class="sobre-texto">
+
+        <p>
+          Meu nome é Thiago Mikis Oliveira dos Santos.
+          Tenho experiência na área administrativa atuando junto à
+          Secretaria Estadual de Saúde e Agência Pernambucana de Vigilância Sanitária (APEVISA).
+        </p>
+
+        <br>
+
+        <p>
+          Durante minha atuação desenvolvi habilidades em organização,
+          atendimento ao público, elaboração de documentos,
+          suporte técnico-administrativo e rotinas internas.
+        </p>
+
+        <br>
+
+        <p>
+          Busco oportunidades para continuar evoluindo profissionalmente,
+          contribuindo com dedicação, responsabilidade e aprendizado contínuo.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- OBJETIVO -->
+
+  <section id="objetivo">
+
+    <div class="section-title">
+
+      <h2>Objetivo Profissional</h2>
+
+    </div>
+
+    <div class="card">
+
+      <p>
+        Apto a exercer atividades nas mais diversas áreas,
+        visando obter resultados que colaborem com o atendimento
+        das necessidades existentes dentro de uma organização,
+        contribuindo com responsabilidade, dedicação e evolução profissional.
+      </p>
+
+    </div>
+
+  </section>
+
+  <!-- EXPERIÊNCIA -->
+
+  <section id="experiencia">
+
+  <div class="section-title">
+
+    <h2>Experiência Profissional</h2>
+
+    <p>
+      Histórico profissional e atuação administrativa.
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <!-- EXPERIÊNCIA 1 -->
+
+    <div class="card">
+
+      <h3>
+        Estagiário (Menor Aprendiz - Auxiliar Administrativo)
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        SES / I GERES / APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        08/06/2015 até 31/10/2016 — 1 ano e 5 meses
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        1ª Unidade Regional de Saúde - SES/PE -
+        Agência Pernambucana de Vigilância Sanitária
+      </p>
+
+      <br>
+
+      <p>
+        Confecção de talonários, abertura de denúncias,
+        entrada de PGRSS, elaboração de apresentações sobre VISA,
+        relatórios das atividades desenvolvidas,
+        apoio às atividades da Coordenação e Servidores,
+        auxiliando a realização de cronogramas de inspeção,
+        abertura de processos, avaliação de desempenho,
+        planejamento anual e relatórios técnicos de inspeção.
+        Atendimento telefônico ao setor regulado;
+        digitação, análise, conferência,
+        arquivamento e protocolo de documentos;
+        recebimento de correspondências.
+      </p>
+
+    </div>
+
+    <!-- EXPERIÊNCIA 2 -->
+
+    <div class="card">
+
+      <h3>
+        Estagiário (Menor Aprendiz - Auxiliar Administrativo)
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        Secretaria de Saúde de Pernambuco - SES-PE/I GERES/APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        01/11/2016 até 31/12/2016 — 176 horas
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        1ª Unidade Regional de Saúde - SES/PE - Agência Pernambucana de Vigilância Sanitária
+      </p>
+
+      <br>
+
+      <p>
+        Confecção de talonários, abertura de denúncias,
+        entrada de PGRSS, elaboração de apresentações,
+        relatórios técnicos, apoio administrativo
+        e auxílio às coordenações internas.
+        Tramitação de documentos no SIGEPE,
+        digitalização e arquivamento documental,
+        suporte em compras institucionais,
+        atendimento ao público e telefônico,
+        digitação de textos e planilhas.
+      </p>
+
+    </div>
+
+    <!-- EXPERIÊNCIA 3 -->
+
+    <div class="card">
+
+      <h3>
+        Jovem Aprendiz - Auxiliar Técnico Administrativo
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        SES / I GERES / APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        08/06/2015 até 31/10/2016 — 1048 horas
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        1ª Unidade Regional de Saúde - SES/PE -
+        Agência Pernambucana de Vigilância Sanitária
+      </p>
+
+      <br>
+
+      <p>
+        Elaboração de apresentações sobre VISA,
+        relatórios das atividades desenvolvidas,
+        apoio às coordenações,
+        cronogramas de inspeção,
+        abertura de processos
+        e planejamento anual.
+        Tramitação documental no SIGEPE,
+        digitalização e arquivamento,
+        suporte ao atendimento público,
+        atendimento telefônico,
+        digitação de textos e planilhas.
+      </p>
+
+    </div>
+
+    <!-- EXPERIÊNCIA 4 -->
+
+    <div class="card">
+
+      <h3>
+        Estagiário — NEA/NUPROC
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        Agência Pernambucana de Vigilância Sanitária - APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        18/09/2023 até 31/12/2023 — 300 horas
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        Secretaria de Saúde de Pernambuco
+      </p>
+
+      <br>
+
+      <p>
+        Suporte à coordenação e técnicos na alimentação
+        do Sistema Estadual de Informações em Vigilância Sanitária (SEVISA),
+        monitoramento do Sistema Eletrônico de Informação (SEI)
+        e acompanhamento de peticionamentos eletrônicos.
+        Apoio ao recebimento e entrega de documentos,
+        digitalização, arquivamento,
+        atendimento ao público,
+        atendimento telefônico
+        e digitação de textos e planilhas.
+      </p>
+
+    </div>
+
+    <!-- EXPERIÊNCIA 5 -->
+
+    <div class="card">
+
+      <h3>
+        Estagiário — Núcleo de Informática
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        Agência Pernambucana de Vigilância Sanitária - APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        01/02/2024 até 23/05/2024 — 324 horas
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        Secretaria de Saúde de Pernambuco
+      </p>
+
+      <br>
+
+      <p>
+        Alimentação do sistema SEVISA,
+        monitoramento do SEI,
+        acompanhamento de solicitações institucionais,
+        apoio técnico-administrativo
+        e suporte às coordenações.
+        Digitalização e arquivamento documental,
+        atendimento ao público e telefônico,
+        digitação de textos,
+        planilhas e suporte operacional interno.
+      </p>
+
+    </div>
+
+    <!-- EXPERIÊNCIA 6 -->
+
+    <div class="card">
+
+      <h3>
+        Estagiário — Núcleo de Informática
+      </h3>
+
+      <p>
+        <strong>Instituição:</strong>
+        Agência Pernambucana de Vigilância Sanitária - APEVISA
+      </p>
+
+      <p>
+        <strong>Período:</strong>
+        08/2024 até 10/2024 — 3 meses
+      </p>
+
+      <p>
+        <strong>Local:</strong>
+        Secretaria de Saúde de Pernambuco
+      </p>
+
+      <br>
+
+      <p>
+        Apoio técnico no Sistema Estadual de Informações
+        em Vigilância Sanitária (SEVISA),
+        monitoramento do Sistema Eletrônico de Informação (SEI)
+        e acompanhamento de canais institucionais.
+        Auxílio em digitalização,
+        arquivamento de documentos,
+        atendimento ao público,
+        atendimento telefônico,
+        textos, planilhas
+        e suporte administrativo.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- FORMAÇÃO -->
+
+<!-- FORMAÇÃO -->
+
+<section id="formacao">
+
+  <div class="section-title">
+
+    <h2>Formação Acadêmica</h2>
+
+    <p>
+      Formação educacional e graduação.
+    </p>
+
+  </div>
+
+  <div class="cards">
+
+    <div class="card">
+
+      <h3>
+        Ensino Médio Completo
+      </h3>
+
+      <p>
+        EREM Francisco de Paula Corrêa de Araújo
+      </p>
+
+    </div>
+
+    <div class="card">
+
+      <h3>
+        Curso Superior (Em Andamento)
+      </h3>
+
+      <p>
+        Bacharelado em Nutrição -
+        Universidade Federal de Pernambuco — UFPE /
+        Centro de Ciências da Saúde
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- HABILIDADES -->
+
+<section id="habilidades">
+
+  <div class="section-title">
+
+    <h2>Habilidades</h2>
+
+    <p>
+      Competências profissionais, administrativas e técnicas.
+    </p>
+
+  </div>
+
+  <div class="skills">
+
+    <div class="skill">HTML</div>
+    <div class="skill">CSS</div>
+    <div class="skill">JavaScript</div>
+    <div class="skill">Swift</div>
+    <div class="skill">SQL</div>
+    <div class="skill">WordPress</div>
+    <div class="skill">SQL Server</div>
+    <div class="skill">VSCode</div>
+    <div class="skill">Github</div>
+    <div class="skill">Vercel</div>
+    <div class="skill">Figma</div>
+    <div class="skill">Canva</div>
+    <div class="skill">Word</div>
+    <div class="skill">Excel</div>
+    <div class="skill">PowerPoint</div>
+    <div class="skill">SIGEPE</div>
+    <div class="skill">SEVISA</div>
+    <div class="skill">SEI</div>
+    <div class="skill">SINAVISA</div>
+    <div class="skill">Inglês Básico</div>
+    <div class="skill">Espanhol Básico</div>
+
+  </div>
+
+</section>
+  </section>
+
+  
+
+  <!-- CONTATO -->
+
+<section id="contato">
+
+  <div class="contato">
+
+    <h2>Contato</h2>
+
+    <p>
+      Entre em contato através dos canais abaixo.
+    </p>
+
+    <div class="btns">
+
+      <a
+      class="btn btn-primary"
+      href="https://wa.me/5581984221950"
+      target="_blank">
+
+        WhatsApp
+
+      </a>
+
+      <a
+      class="btn btn-secondary"
+      href="mailto:ksmithiago@hotmail.com">
+
+        E-mail
+
+      </a>
+
+      <a
+      class="btn btn-secondary"
+      href="https://www.linkedin.com/in/thiago-mikis-oliveira-dos-santos-414b66257"
+      target="_blank">
+
+        LinkedIn
+
+      </a>
+
+    </div>
+
+    <br><br>
+
+    <!-- QR CODE LINKEDIN -->
+
+    <div class="qrcode-box">
+
+      <h3>QR Code do LinkedIn</h3>
+
+      <br>
+
+      <!-- TROQUE O CAMINHO DA IMAGEM -->
+      <div class="qrcode">
+      <img src="./img/qrcode-linkedin.png" alt="QR Code">
+      </div>
+
+      <p class="qr-text">
+        Escaneie para acessar meu perfil profissional.
+      </p>
+
+    </div>
+
+    <br><br>
+
+    <p>
+      📞 (81) 98422-1950
+    </p>
+
+    <p>
+      📧 ksmithiago@hotmail.com / thiago.mikis@ufpe.br
+    </p>
+
+    <p>
+      📍 Recife – Caxangá / Nova Morada
+    </p>
+
+  </div>
+
+</section>
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <p>
+      © 2026 Thiago Mikis — Todos os direitos reservados.
+    </p>
+
+  </footer>
+
+</body>
+
+</html>
