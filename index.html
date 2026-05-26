@@ -304,25 +304,24 @@
         height: 180px;
       }
 
-    .qrcode{
-    width:220px;
-    padding:12px;
+  .qrcode{
+    width:min(220px, 70vw);
+
+    padding:10px;
     background:#fff;
 
     border:4px solid #2563eb;
-    border-radius:35px;
+    border-radius:28px;
 
     overflow:hidden;
 
     box-shadow:0 0 25px rgba(37,99,235,.3);
     transition:.4s;
 
-    /* CENTRALIZAR */
     display:flex;
     justify-content:center;
     align-items:center;
 
-    /* RESPONSIVO */
     margin:0 auto;
 }
 
@@ -332,10 +331,10 @@
 
     display:block;
 
-    border-radius:25px;
+    border-radius:20px;
 
-    /* EVITA BUG NO EDGE/WINDOWS */
     object-fit:cover;
+}
 }
   </style>
 </head>
